@@ -1,0 +1,28 @@
+<div class="popup shadow-layer-1">
+  <div class="shadow-layer-1">
+    <h2>{{localization.save_as.title}}</h2>
+    <a class="close shadow-layer-1" id="closePopup" href="#">x</a>
+  </div>
+  <div class="save-as-container">
+    <div class="material-input-box active f-row">
+      <div class="material-placeholder-mask">{{localization.save_as.your_current}}</div>
+      <a class="material-main-input" target="_blank" href="{{link}}">{{link}}</a>
+    </div>
+    <div class="material-input-box f-row">
+      <div class="material-placeholder-mask">{{localization.save_form.model_name}}</div>
+      <input type="text" class="material-main-input model-name" value="{{model_name}}"/>
+    </div>
+    {{#libraryMode}}
+      <label class="f-row">
+        <input type="checkbox" id="resetLibraryImage">
+        Update library image
+      </label>
+    {{/libraryMode}}
+  </div>
+  <div class="footer">
+    {{^libraryMode}}
+      <button class="btn-saveForm action" data-action="save">{{localization.save_as.save_button}}</button>
+    {{/libraryMode}}
+    <button class="btn-saveForm action" data-action="update">{{localization.save_as.update_button}}</button>
+  </div>
+</div>

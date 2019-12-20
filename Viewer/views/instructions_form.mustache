@@ -1,0 +1,24 @@
+<div id="instructions-form" class="overlay">
+  <form class="popup shadow-layer-1">
+    <a href="#" class="close shadow-layer-2">x</a>
+    <h2 class="shadow-layer-1">
+      {{localization.instructions.header}}
+    </h2>
+    <div class="content">
+      <div class="f-row">
+        <label class="form-label">{{localization.instructions.click_to_generate}}</label>
+      </div>
+      <div class="material-input-box f-row">
+        <div class="material-placeholder-mask">{{localization.save_form.name}}</div>
+        <input type="text" class="material-main-input model-name" name="name" value="{{name}}"/>
+      </div>
+      <div class="material-input-box f-row">
+        <div class="material-placeholder-mask">{{localization.save_form.email}}</div>
+        <input type="email" class="material-main-input model-name" required="required" name="email" value="{{email}}"/>
+      </div>
+    </div>
+    <div class="footer">
+      <input class="submit-btn generate-btn" type="submit" value="{{localization.generate}}"/>
+    </div>
+  </form>
+</div>

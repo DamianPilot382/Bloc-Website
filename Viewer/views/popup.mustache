@@ -1,0 +1,85 @@
+<div class="popup shadow-layer-1">
+  <form action="#" id="js-popup-form">
+    <div class="shadow-layer-1">
+      <h2>{{localization.save_form.header}}</h2>
+      <a class="close shadow-layer-1" id="closePopup" href="#">x</a>
+    </div>
+    <div class="content">
+      <div class="f-row">
+        <div class="material-input-box form-input">
+          <div class="material-placeholder-mask">{{localization.save_form.name}}</div>
+          <input id="i-name" type="text" class="material-main-input"/>
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="material-input-box form-input">
+          <div class="material-placeholder-mask">{{localization.save_form.company_name}}</div>
+          <input id="i-cname" type="text" class="material-main-input"/>
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="material-input-box form-input">
+          <div class="material-placeholder-mask">{{localization.save_form.Address}}</div>
+          <input id="i-address" type="text" class="material-main-input"/>
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="material-input-box form-input">
+          <div class="material-placeholder-mask">{{localization.save_form.city}}</div>
+          <input id="i-city" type="text" class="material-main-input"/>
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="material-input-box form-input">
+          <div class="material-placeholder-mask">{{localization.save_form.state}}</div>
+          <input id="i-state" type="text" class="material-main-input"/>
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="material-input-box form-input">
+          <div class="material-placeholder-mask">{{localization.save_form.zip}}</div>
+          <input id="i-zip" type="text" class="material-main-input"/>
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="material-input-box form-input">
+          <div class="material-placeholder-mask">{{localization.save_form.phone}}</div>
+          <input id="i-phone" type="text" class="material-main-input"/>
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="material-input-box form-input">
+          <div class="material-placeholder-mask">{{localization.save_form.email}}</div>
+          <input id="i-email" type="text" class="material-main-input"/>
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="material-input-box form-input">
+          <div class="material-placeholder-mask">{{localization.save_form.model_name}}</div>
+          <input id="i-modelname" type="text" class="material-main-input"/>
+        </div>
+      </div>
+      <div class="f-row">
+        <input id="i-check" type="checkbox" />
+        <span>{{localization.save_form.check_contact}}</span>
+      </div>
+      <div>
+        <button tabindex="-1" class="btn-saveForm" id="saveForm">{{localization.save_form.save}}</button>
+      </div>
+    </div>
+  </form>
+
+  {{#showPrices}}
+    <div class="price-list">
+      <h1 class="price-list-header">{{localization.price_list.title}}</h1>
+      <ul>
+        {{#priceList.blocks}}
+          <li class="price-list-item"><strong>{{name}}</strong>: {{count}} x ${{price}} <span class="price-list-total">${{humanizedTotal}}</span></li>
+        {{/priceList.blocks}}
+      </ul>
+      <hr>
+      <div class="total-price"><strong>${{priceList.totalPrice}}</strong></div>
+      <div class="price-list-note">Discounts are available for larger order sizes and quantities. Call for quotation.</div>
+    </div>
+  {{/showPrices}}
+</div>

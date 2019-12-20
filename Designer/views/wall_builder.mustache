@@ -1,0 +1,173 @@
+<div id="wall-generator" class="overlay">
+  <form class="builder-form shadow-layer-1">
+    <a href="#" class="preview shadow-layer-2">
+      <i class="fa fa-eye"></i>
+      <span>{{localization.wall_builder.preiview}}</span>
+    </a>
+    <div class="wall-preview active shadow-layer-1">
+      <h3 class="preview-title">
+        <div>{{localization.wall_builder.here_how}}</div>
+        <div class="preview-wall-type">{{localization.wall_builder.standard_wall}}</div>
+      </h3>
+      <img src="/images/previews/running-wall/running-wall.png"/>
+    </div>
+    <a href="#" class="close shadow-layer-2">x</a>
+    <div class="title shadow-layer-1">
+			{{localization.wall_builder.header}}
+    </div>
+    <div class="wall-type">
+      <div class="form-input">
+        <select name="wall-type" class="js-material-select wall-type-select" placeholder="{{localization.wall_builder.wall_type}}">
+          <option selected value="running-wall">{{localization.wall_builder.standard_wall}}</option>
+          <option value="wall-with-openings">{{localization.wall_builder.wall_with_openings}}</option>
+        </select>
+      </div>
+    </div>
+    <label class="form-label">
+			{{localization.length}}
+    </label>
+		{{#localization.is_metric}}
+      <div class="material-input-box form-input">
+        <div class="material-placeholder-mask">{{localization.centimeters}}</div>
+        <input autocomplete="off" type="text" name="length-cm"data-measure="centimeters_length" class="material-main-input"/>
+      </div>
+		{{/localization.is_metric}}
+		{{^localization.is_metric}}
+      <div class="material-input-box form-input-half js-length-feet">
+        <select name="length-ft" class="js-material-select" placeholder="{{localization.feet}}">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option selected value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+        </select>
+      </div>
+      <div class="material-input-box form-input-half js-length-inches">
+        <select name="length-inches" class="js-material-select" placeholder="{{localization.inches}}">
+          <option selected value="0">0</option>
+          <option selected value="3">3</option>
+          <option value="6">6</option>
+        </select>
+      </div>
+		{{/localization.is_metric}}
+    <label class="form-label">
+			{{localization.height}}
+    </label>
+		{{#localization.is_metric}}
+      <div class="material-input-box form-input">
+        <div class="material-placeholder-mask">{{localization.centimeters}}</div>
+        <input autocomplete="off" type="text" name="height-cm"data-measure="centimeters_height" class="material-main-input"/>
+      </div>
+		{{/localization.is_metric}}
+		{{^localization.is_metric}}
+      <div class="material-input-box form-input-half">
+        <select name="height-ft" class="js-material-select" placeholder="{{localization.feet}}">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option selected value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+        </select>
+      </div>
+      <div class="material-input-box form-input-half">
+        <select name="height-inches" class="js-material-select" placeholder="{{localization.inches}}">
+          <option selected value="0">0</option>
+          <option value="6">6</option>
+        </select>
+      </div>
+    {{/localization.is_metric}}
+    <div class="form-label form-instruction">
+      {{localization.wall_builder.walls_instruction}}
+    </div>
+
+    <div class="add-support-msg">
+      <label class="form-label">
+        <input autocomplete="off" type="checkbox" target=".add-support-form" class="check add-support-btn"/>
+        {{localization.wall_builder.add_support_at_end}}
+      </label>
+
+      <div class="add-support-form">
+        <label class="form-label">
+          <input autocomplete="off" class="bothSides check" type="checkbox" value="true" name="bothSides" checked/>
+          {{localization.wall_builder.bothsides}}
+        </label>
+        <div class="form-input">
+          <select name="supportType" class="support-braces-type-select js-material-select" placeholder="{{localization.wall_builder.support_braces}}">
+            <option selected value="smallT">{{localization.wall_builder.small_t}}</option>
+            <option value="smallL">{{localization.wall_builder.small_l}}</option>
+            <option value="largeT">{{localization.wall_builder.large_t}}</option>
+            <option value="largeL">{{localization.wall_builder.large_l}}</option>
+            <option value="column">{{localization.wall_builder.column}}</option>
+            <option value="heavyDutyColumn">{{localization.wall_builder.heavy_duty_column}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <label class="form-label">
+      <input autocomplete="off" type="checkbox" name="add-column" target=".add-support-columns" class="add-columns check"/>
+			{{localization.wall_builder.add_support}}
+    </label>
+    <div class="add-support-columns">
+      <div class="form-input-half">
+        <select name="columnType" class="column-type-select js-material-select" placeholder="{{localization.wall_builder.support_type}}">
+          <option selected value="insideT">{{localization.wall_builder.first_column}}</option>
+          {{!-- NOTE: Deprecated support type --}}
+          {{!-- <option style="display: none !important" value="insideStrongL">{{localization.wall_builder.second_column}}</option> --}}
+          <option value="insideL">{{localization.wall_builder.third_column}}</option>
+        </select>
+      </div>
+      <div class="form-input-half">
+        <select name="spaceBetween" class="space-between js-material-select" placeholder="{{localization.wall_builder.space_between}}">
+          <option value="4">{{localization.wall_builder.4_inch}}</option>
+          <option selected value="5">{{localization.wall_builder.5_inch}}</option>
+          <option value="6">{{localization.wall_builder.6_inch}}</option>
+          <option value="7">{{localization.wall_builder.7_inch}}</option>
+          <option value="8">{{localization.wall_builder.8_inch}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="footer">
+      <input class="submit-btn generate-btn" type="submit" value="{{localization.generate}}"/>
+    </div>
+  </form>
+</div>

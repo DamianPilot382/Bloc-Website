@@ -1,0 +1,120 @@
+<div class="fallback-msg">
+	{{localization.fallback_msg}}
+  <a class="close" href="#">×</a>
+</div>
+<div class="menu shadow-layer-1">
+  <button disabled id="saveModel" title="{{localization.menu.save}}"><i class="fa fa-download"></i><span class="button-title">{{localization.save}}</span></button>
+  <button id="addHuman" title="{{localization.menu.insert_person}}"><i class="fa fa-male"></i></button>
+  <div class="section-undo-redo">
+    <button id="btnUndo" data-action="undo" title="{{localization.menu.undo}}"><i class="fa fa-undo"></i></button>
+    <button id="btnRedo" data-action="redo" title="{{localization.menu.redo}}"><i class="fa fa-repeat"></i></button>
+  </div>
+  <button id="removeGrid" title="{{localization.toggle_grid}}"><i class="fa fa-th-large"></i></button>
+  <button class="sound-on">
+    <i class="fa fa-ban"></i>
+    <i class="fa fa-volume-up"></i>
+    <i class="fa fa-volume-off"></i>
+  </button>
+</div>
+
+<div class="sidebar left-sidebar">
+  <div class="header-caption shadow-layer-1"></div>
+    <div class="logo"><a href="http://vei-bloc.com/"><img src="images/VEI.png"/></a>
+        <a href="http://vei-bloc.com/"><img src="images/logo_transparent.png" /></a></div>
+  <div class="logo-info">
+		<div>{{localization.header_info.phone}}</div>
+  </div>
+  <div class="tabs-list">
+    <div class="tab-content">
+      <div class="tab-caption">{{{localization.menu.title}}}</div>
+      <div class="menu-blocks-scroll-section">
+        <div class="menu-blocks blocks active">
+          <button class="insert-block-btn with-text full" tabindex="-1" data-label="{{localization.blocks.full}}" data-color="0x333333" data-type="full" title="{{localization.menu.insert_full}}"></button>
+          <button class="insert-block-btn with-text half" tabindex="-1" data-label="{{localization.blocks.half}}" data-color="0x2E648D" data-type="half" title="{{localization.menu.insert_half}}"></button>
+          <button class="insert-block-btn with-text cap" tabindex="-1" data-label="{{localization.blocks.cap}}" data-color="0xEb8942" data-type="cap" title="{{localization.menu.insert_cap}}"></button>
+        </div>
+      </div>
+    </div>
+    <menu class="tabs-buttons">
+    </menu>
+  </div>
+  <div id="elements-container"></div>
+</div>
+
+<div class="widget-zoom shadow-layer-1">
+  <button class="widget-zoom-button widget-zoom-in" data-zoom="true"><i class="fa fa-plus"></i></button>
+  <button class="widget-zoom-button widget-zoom-out" data-zoom="false"><i class="fa fa-minus"></i></button>
+</div>
+
+
+<div class="rotate shadow-layer-1">
+  <div class="builder-rotator">
+    <a class="ir" data-rotate="RIGHT" href="#rotate90"></a>
+    <a class="ir" data-rotate="DOWN" href="#rotate0"></a>
+    <a class="ir" data-rotate="TOP" href="#rotate270"></a>
+    <a class="ir" data-rotate="LEFT" href="#rotate180"></a>
+    <img src="images/rotate-indicator.png">
+  </div>
+</div>
+
+<div class="model-details">
+ <p><strong>{{localization.model_details.model}}: </strong><span id="modelDataName"></span></p>
+ <p><strong>{{localization.model_details.designer}}: </strong><span id="modelDataDesigner"></span></p>
+</div>
+
+<div class="top-menu-output">
+  {{> tips}}
+  {{> library }}
+  {{> wall_builder }}
+</div>
+
+<div class="scene-move shadow-layer-1">
+  <button class="widget-zoom-button widget-zoom-in" data-move="true"><i class="fa fa-chevron-left"></i></button>
+  <button class="widget-zoom-button widget-zoom-out move" data-move="false"><i class="fa fa-chevron-right"></i></button>
+</div>
+
+<div class="block-menu sidebar right-sidebar" id="block-menu">
+  <div class="top-menu">
+    <div class="js-help-window help-window shadow-layer-1 bolder" data-target="pro-tips">
+      {{localization.tips.title}}
+    </div>
+    <div class="js-help-window help-window shadow-layer-1 bolder" data-target="library-component">
+      {{localization.library.title}}
+    </div>
+    <div class="js-help-window help-window shadow-layer-1 bolder" data-target="wall-generator">
+      {{localization.wall_builder.title}}
+    </div>
+
+  </div>
+  <div class="colors-palette js-colors-palette shadow-layer-1">
+    <h3 class="caption">{{localization.color_selection}}:</h3>
+    <button class="btn-blue color-item" data-color="BLUE" title="{{localization.colors.blue}}"></button>
+    <button class="btn-orange color-item" data-color="ORANGE" title="{{localization.colors.orange}}"></button>
+    <button class="btn-white color-item" data-color="WHITE" title="{{localization.colors.white}}"></button>
+    <button class="btn-black color-item" data-color="BLACK" title="{{localization.colors.black}}"></button>
+  </div>
+  <div class="block-move-container">
+    <div class="menu-rotate__container">
+      <button class="btn-rotate btn" data-type="rotate"><i class="fa fa-refresh"></i>{{localization.menu.rotate}}</button>
+    </div>
+    <div class="menu-delete__container">
+      <button class="btn-delete btn"><i class="fa fa-times"></i>{{localization.menu.remove}}</button>
+    </div>
+    <div class="menu-move__container">
+      <div class="menu-arrows absolute-center">
+        <button class="btn-backward" data-move="BACKWARD" title="{{localization.menu.backward}}"><i class="fa fa-arrow-down"></i></button>
+        <button class="btn-forward" data-move="FORWARD" title="{{localization.menu.forward}}"><i class="fa fa-arrow-up"></i></button>
+        <button class="btn-up" data-move="UP" title="{{localization.menu.up}}"><i class="fa fa-chevron-up"></i></button>
+        <button class="btn-right" data-move="RIGHT" title="{{localization.menu.right}}" data-rotate="RIGHT"><i class="fa fa-arrow-right"></i></button>
+        <button class="btn-down" data-move="DOWN" title="{{localization.menu.down}}"><i class="fa fa-chevron-down"></i></button>
+        <button class="btn-left" data-move="LEFT" title="{{localization.menu.left}}" data-rotate="LEFT"><i class="fa fa-arrow-left"></i></button>
+        <div class="inner-circle absolute-center shadow-layer-1"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{> instructions_form}}
+
+<div id="popup" class="overlay">
+</div>

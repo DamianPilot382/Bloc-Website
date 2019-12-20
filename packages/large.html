@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!--
+_____   _       _____   _____
+|  _  \ | |     /  _  \ /  ___|
+| |_| | | |     | | | | | |
+|  _  { | |     | | | | | |
+| |_| | | |___  | |_| | | |___
+|_____/ |_____| \_____/ \_____|
+      Ideas Taking Shape
+
+(c) Bloc, 2017-2018
+South Pasadena High School, California
+
+==================
+This is an official Virtual
+Enterprises International firm
+website for educational purposes
+only for 2017-2018 - "Bloc"
+==================
+
+Damian Ugalde
+-->
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bloc | Ideas Taking Shape</title>
+
+  <!--CSS-->
+  <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link rel="../stylesheet" type="text/css" href="plugins/cubeportfolio/css/cubeportfolio.min.css">
+  <link href="../css/owl.carousel.css" rel="stylesheet" media="screen" />
+  <link href="../css/owl.theme.css" rel="stylesheet" media="screen" />
+  <link href="../css/animate.css" rel="stylesheet" />
+  <link href="../css/style.css" rel="stylesheet">
+
+  <link id="bodybg" href="../bodybg/bg1.css" rel="stylesheet" type="text/css" />
+  <link id="t-colors" href="../color/default.css" rel="stylesheet">
+
+  <!--JavaScript-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="../js/custom.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.easing.min.js"></script>
+  <script src="../js/wow.min.js"></script>
+  <script src="../js/jquery.scrollTo.js"></script>
+  <script src="../js/jquery.appear.js"></script>
+  <script src="../js/stellar.js"></script>
+  <script src="../plugins/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+  <div id="wrapper">
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="container navigation">
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+          <!--Navbar Logo-->
+          <a class="navbar-brand" href="../index.html">
+            <img src="../img/logo.png" width="150" height="50" class="img-responsive"/>
+          </a>
+        </div>
+
+        <!--Navbar Contents-->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+          <ul class="nav navbar-nav nav-text">
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">Packages<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="../packages/small.html">Small</a></li>
+                <li><a href="../packages/Medium.html">Medium</a></li>
+                <li><a href="../packages/Large.html">Large</a></li>
+                <li><a href="../packages/Mega.html">Mega</a></li>
+              </ul>
+            </li>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../philanthropy.html">Philanthropy</a></li>
+            <li><a href="../outreach.html">Outreach</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">Newsletter<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="../newsletters/september_october.pdf">Sep./Oct.</a></li>
+                <li><a href="../newsletters/december_january.pdf">Dec./Jan.</a></li>
+                <li><a href="../newsletters/february_march.pdf">Feb./Mar.</a></li>
+                <li><a href="../newsletters/march_april.pdf">Mar./Apr.</a></li>
+              </ul>
+            </li>
+            <li><a href="http://designer.vei-bloc.com/">3D Builder</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      //Carousel thumbnails handler
+      jQuery(document).ready(function($) {
+
+            $('#picCarousel').carousel({
+                    interval: 5000
+            });
+
+            $('#carousel-text').html($('#slide-content-0').html());
+
+           $('[id^=carousel-selector-]').click( function(){
+                var id = this.id.substr(this.id.lastIndexOf("-") + 1);
+                var id = parseInt(id);
+                $('#picCarousel').carousel(id);
+            });
+
+        });
+    </script>
+
+    <section id="contents" class="home-section tiles-white" style="margin-top:-60px;">
+      <div class="container">
+              <div id="main_area">
+                      <div class="row">
+                          <div class="col-xs-12" id="slider">
+                              <div class="row">
+                                  <div class="col-sm-8" id="carousel-bounding-box">
+                                      <div class="carousel slide" id="picCarousel">
+
+                                          <!-- Carousel items -->
+                                          <div class="carousel-inner">
+                                              <div class="active item" data-slide-number="0">
+                                              <img src="../img/packages/large/sleek/1.jpg" id="pic-0"></div>
+
+                                              <div class="item" data-slide-number="1">
+                                              <img src="../img/packages/large/sleek/2.jpg" id="pic-1"></div>
+
+                                          </div>
+                                          <!--Carousel Buttons-->
+                                          <a class="left carousel-control" href="#picCarousel" role="button" data-slide="prev">
+                                              <span class="glyphicon glyphicon-chevron-left"></span>
+                                          </a>
+                                          <a class="right carousel-control" href="#picCarousel" role="button" data-slide="next">
+                                              <span class="glyphicon glyphicon-chevron-right"></span>
+                                          </a>
+                                          </div>
+                                  </div>
+
+                                  <div class="col-sm-4 package-info">
+                                  <center>
+                                          <h2 class="roboto">Large Package</h2>
+                                          <h6 class="barlow">With the <b>Large</b> package, you get:</h6>
+                                            <ul class="hide-bullets barlow" style="font-size:22px;">
+                                              <li>Blocks: <b>50</b></li>
+                                              <li>Toppers: <b>30</b></li>
+                                              <li>Squares: <b>25</b></li>
+                                            </ul>
+                                            <br>
+                                          <h2><b>$650</b></h2>
+                                          <p class="barlow" style="color:gray; font-size:16px;">*Plus $18.85 shipping to the U.S.</p>
+                                          <label>
+                                            <input type="radio" name="color" value="vivid" id="vivid"/>
+                                            <img src="../img/colors/vivid.png">
+                                            <p style="roboto">Vivid</p>
+                                          </label>
+
+                                          <label>
+                                            <input type="radio" name="color" value="sleek" id="sleek" checked/>
+                                            <img src="../img/colors/sleek.png">
+                                            <p style="roboto">Sleek</p>
+                                          </label>
+
+                                          <label>
+                                            <input type="radio" name="color" value="slate" id="slate"/>
+                                            <img src="../img/colors/slate.png">
+                                            <p style="roboto">Slate</p>
+                                          </label>
+                                          <br>
+                                          <a href="https://portal.veinternational.org/buybuttons/us021804/btn/large-package-sleek-32/" id="buyBtn" class="btn btn-skin btn-lg roboto">Buy Now <i class="fa fa-shopping-cart"></i> <i class="fa fa-angle-right"></i></a>
+
+                                  </center>
+                                </div>
+                                <br>
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="row hidden-xs" id="slider-thumbs">
+                              <!--Carousel Thumbnails-->
+                              <ul class="hide-bullets">
+                                  <li class="col-sm-1 thumb-pic">
+                                      <a class="thumbnail" id="carousel-selector-0"><img src="../img/packages/large/sleek/1.jpg" id="thumb-0"></a>
+                                  </li>
+
+                                  <li class="col-sm-1 thumb-pic">
+                                      <a class="thumbnail" id="carousel-selector-1"><img src="../img/packages/large/sleek/2.jpg" id="thumb-1"></a>
+                                  </li>
+
+                              </ul>
+                      </div>
+              </div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      flip = false;
+      picNum = 2;
+      kit="large";
+
+      function switchPictures(color, num){
+        if(flip){
+          for(i = 0; i < num; i++){
+            document.getElementById("pic-"+i).src = "../img/packages/"+kit+"/"+color+"/"+i+".jpg";
+            document.getElementById("thumb-"+i).src= "../img/packages/"+kit+"/"+color+"/"+i+".jpg";
+          }
+        }
+      }
+
+      function switchLink(color, pack){
+        colorIndex = 1;
+        if (color == "sleek") colorIndex = 2;
+        else if (color == "slate") colorIndex = 3;
+
+        kitIndex = 1;
+        if (pack == "medium") kitIndex = 2;
+        else if (pack == "large") kitIndex = 3;
+        else if (pack == "mega") kitIndex = 4;
+        document.getElementById("buyBtn").href="https://portal.veinternational.org/buybuttons/us021804/btn/"+kit+"-package-"+color+"-"+kitIndex+colorIndex+"/";
+      }
+
+      document.getElementById("vivid").onclick = function(){
+        switchPictures("vivid", picNum);
+        switchLink("vivid", kit);
+      };
+      document.getElementById("sleek").onclick = function(){
+        switchPictures("sleek", picNum);
+        switchLink("sleek", kit);
+      };
+      document.getElementById("slate").onclick = function(){
+        switchPictures("slate", picNum);
+        switchLink("slate", kit);
+      };
+    </script>
+
+
+    <footer>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+              <div class="widget">
+                <h5>Virtual Enterprises</h5>
+                <p>
+                  This is an official Virtual Enterprises International firm website for educational purposes only for 2017-2018 - "Bloc"
+                </p>
+                <img src="../img/VEI.png" class="img-responsive" width="200px;">
+
+              </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+              <div class="widget">
+                <ul>
+                  <li>
+                    <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+                </span> 1401 Fremont Avenue, South Pasadena, California
+                  </li>
+                  <li>
+                    <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+                </span> (626)-441-5820
+                  </li>
+                  <li>
+                    <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                </span> bloc.ca@veinternational.org
+                  </li>
+
+                </ul>
+              </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+              <div class="widget">
+                <h5>Follow us</h5>
+                <ul class="company-social">
+                  <li class="social-facebook"><a href="https://www.facebook.com/VEI-BLOC-1959705370954859/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                  <li class="social-twitter"><a href="https://twitter.com/vei_BLOC" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li class="social-instagram"><a href="https://www.instagram.com/vei.bloc/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+              </div>
+
+              <div class="widget">
+                <p>&copy; Bloc, 2017 - South Pasadena High School</p>
+
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <a href="#page-top" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+
+</body>
+
+</html>
